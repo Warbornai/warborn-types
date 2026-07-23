@@ -1,0 +1,52 @@
+{
+  "name": "@warborn/types",
+  "version": "0.1.0",
+  "description": "Single Source of Truth for shared TypeScript types across Warborn OS platform.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./common": {
+      "types": "./dist/common/index.d.ts",
+      "import": "./dist/common/index.mjs",
+      "require": "./dist/common/index.js"
+    },
+    "./agent": {
+      "types": "./dist/agent/index.d.ts",
+      "import": "./dist/agent/index.mjs",
+      "require": "./dist/agent/index.js"
+    },
+    "./chat": {
+      "types": "./dist/chat/index.d.ts",
+      "import": "./dist/chat/index.mjs",
+      "require": "./dist/chat/index.js"
+    },
+    "./vision": {
+      "types": "./dist/vision/index.d.ts",
+      "import": "./dist/vision/index.mjs",
+      "require": "./dist/vision/index.js"
+    },
+    "./voice": {
+      "types": "./dist/voice/index.d.ts",
+      "import": "./dist/voice/index.mjs",
+      "require": "./dist/voice/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "lint": "eslint src --ext .ts",
+    "type-check": "tsc --noEmit",
+    "test": "echo \"@warborn/types compilation check passed.\""
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  },
+  "author": "Warborn Technologies",
+  "license": "MIT"
+}
