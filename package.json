@@ -47,6 +47,29 @@
   "devDependencies": {
     "typescript": "^5.9.3"
   },
-  "author": "Warborn Technologies",
-  "license": "MIT"
+  "author": "Warborn Technologies <support@warborn.tech>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Warbornai/warborn-types.git"
+  },
+  "homepage": "https://github.com/Warbornai/warborn-types#readme",
+  "bugs": {
+    "url": "https://github.com/Warbornai/warborn-types/issues"
+  },
+  "keywords": [
+    "warborn",
+    "ai-operating-system",
+    "autonomous-agents",
+    "warborn-brain",
+    "types"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ]
 }
