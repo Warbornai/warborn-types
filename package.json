@@ -45,7 +45,7 @@
     "test": "echo \"@warborn/types compilation check passed.\""
   },
   "devDependencies": {
-    "typescript": "^5.9.3"
+    "typescript": "^7.0.2"
   },
   "author": "Warborn Technologies <support@warborn.tech>",
   "license": "MIT",
