@@ -30,6 +30,7 @@ __exportStar(require("./events"), exports);
 __exportStar(require("./provider"), exports);
 __exportStar(require("./runtime"), exports);
 __exportStar(require("./telemetry"), exports);
+__exportStar(require("./tools"), exports);
 __exportStar(require("./vision"), exports);
 __exportStar(require("./voice"), exports);
 __exportStar(require("./workflow"), exports);

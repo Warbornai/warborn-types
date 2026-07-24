@@ -14,6 +14,7 @@ export * from './events';
 export * from './provider';
 export * from './runtime';
 export * from './telemetry';
+export * from './tools';
 export * from './vision';
 export * from './voice';
 export * from './workflow';
