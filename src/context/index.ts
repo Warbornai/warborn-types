@@ -36,3 +36,48 @@ export interface ContextChunk {
   readonly score: number;
   readonly source: string;
 }
+
+export interface ContextProviderResult {
+  readonly sourceName: string;
+  readonly priority: number;
+  readonly confidence: number;
+  readonly tokens: number;
+  readonly metadata: Record<string, unknown>;
+  readonly context: string;
+}
+
+export interface IContextProvider {
+  readonly sourceName: string;
+  retrieveContext(query: string, options?: Record<string, unknown>): Promise<ContextProviderResult>;
+}
+
+export interface ContextRankedItem {
+  readonly sourceName: string;
+  readonly context: string;
+  readonly relevanceScore: number;
+  readonly recencyScore: number;
+  readonly importanceScore: number;
+  readonly missionScore: number;
+  readonly workspaceScore: number;
+  readonly finalScore: number;
+  readonly tokens: number;
+}
+
+export interface ContextMetrics {
+  readonly retrievalMs: number;
+  readonly rankingMs: number;
+  readonly compressionRatio: number;
+  readonly totalTokens: number;
+  readonly cacheHit: boolean;
+}
+
+export interface ContextBundle {
+  readonly id: ContextId;
+  readonly query: string;
+  readonly rankedItems: readonly ContextRankedItem[];
+  readonly totalTokens: number;
+  readonly compressedContent: string;
+  readonly prompt: string;
+  readonly createdAt: ISO8601Timestamp;
+  readonly metrics: ContextMetrics;
+}
