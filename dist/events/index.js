@@ -1,10 +1,10 @@
 "use strict";
 /**
- * Event Bus, Payloads, and System Event Envelopes.
+ * Event Bus, Payloads, Broker, & Distributed Event Envelopes.
  * @module @warborn/types/events
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.EventTopic = void 0;
+exports.EventPriority = exports.EventCategory = exports.EventTopic = void 0;
 var EventTopic;
 (function (EventTopic) {
     EventTopic["AGENT_STARTED"] = "agent.started";
@@ -15,4 +15,27 @@ var EventTopic;
     EventTopic["AUDIO_STREAM_STARTED"] = "voice.stream_started";
     EventTopic["SYSTEM_METRIC"] = "telemetry.metric";
 })(EventTopic || (exports.EventTopic = EventTopic = {}));
+var EventCategory;
+(function (EventCategory) {
+    EventCategory["SYSTEM"] = "SYSTEM";
+    EventCategory["MISSION"] = "MISSION";
+    EventCategory["AGENT"] = "AGENT";
+    EventCategory["TOOL"] = "TOOL";
+    EventCategory["MEMORY"] = "MEMORY";
+    EventCategory["CONTEXT"] = "CONTEXT";
+    EventCategory["REASONING"] = "REASONING";
+    EventCategory["TELEMETRY"] = "TELEMETRY";
+    EventCategory["SECURITY"] = "SECURITY";
+    EventCategory["PLUGIN"] = "PLUGIN";
+    EventCategory["WORKFLOW"] = "WORKFLOW";
+    EventCategory["USER"] = "USER";
+    EventCategory["CUSTOM"] = "CUSTOM";
+})(EventCategory || (exports.EventCategory = EventCategory = {}));
+var EventPriority;
+(function (EventPriority) {
+    EventPriority["LOW"] = "LOW";
+    EventPriority["NORMAL"] = "NORMAL";
+    EventPriority["HIGH"] = "HIGH";
+    EventPriority["CRITICAL"] = "CRITICAL";
+})(EventPriority || (exports.EventPriority = EventPriority = {}));
 //# sourceMappingURL=index.js.map
